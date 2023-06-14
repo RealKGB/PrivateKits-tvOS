@@ -26,8 +26,8 @@ let coreSVGTBD = sourcesDirectory.appendingPathComponent("CFrameworks/CoreSVG/Co
 let coreSVGLinkerSetting = LinkerSetting.unsafeFlags([coreSVGTBD.path])
 
 let package = Package(
-    name: "PrivateKits",
-    platforms: [.iOS(.v13), .macOS(.v10_15)],
+    name: "PrivateKits-tvOS",
+    platforms: [.tvOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(name: "ApplicationsWrapper", targets: ["ApplicationsWrapper"]),
