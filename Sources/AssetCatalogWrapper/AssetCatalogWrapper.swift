@@ -168,19 +168,6 @@ public class Rendition: Hashable {
         self.name = type == .icon ? cuiRend.name() : namedLookup.name
     }
     
-    #if canImport(UIKit)
-    public func makeDragItem() -> UIDragItem? {
-        guard let cgImage = self.image else { return nil }
-        
-        let image = UIImage(cgImage: cgImage)
-        let itemProvider = NSItemProvider(object: image)
-        let dragItem = UIDragItem(itemProvider: itemProvider)
-        dragItem.localObject = image
-        
-        return dragItem
-    }
-    #endif
-    
     /// The idiom, aka the platform target, of a Rendition
     public enum Idiom: CustomStringConvertible {
         /// All platforms.
