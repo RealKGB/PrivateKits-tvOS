@@ -17,8 +17,10 @@ import AppKit
 public struct ApplicationsManager {
     public let allApps: [LSApplicationProxy]
     public static let shared = ApplicationsManager(allApps: LSApplicationWorkspace.default().allApplications())
-    
-    public init() { }
+
+    public init(allApps: [LSApplicationProxy]) {
+        self.allApps = allApps
+    }
     
     public func application(forContainerURL containerURL: URL) -> LSApplicationProxy? {
         return allApps.first { app in
