@@ -18,6 +18,8 @@ public struct ApplicationsManager {
     public let allApps: [LSApplicationProxy]
     public static let shared = ApplicationsManager(allApps: LSApplicationWorkspace.default().allApplications())
     
+    public init() { }
+    
     public func application(forContainerURL containerURL: URL) -> LSApplicationProxy? {
         return allApps.first { app in
             app.containerURL() == containerURL
