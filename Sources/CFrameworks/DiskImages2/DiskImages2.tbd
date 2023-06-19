@@ -1,5 +1,5 @@
 --- !tapi-tbd-v3
-archs:                 [ arm64, arm64e]
+archs:                 [ arm64, arm64e ]
 platform:              tvos
 flags:                 [ flat_namespace ]
 install-name:          /System/Library/PrivateFrameworks/DiskImages2.framework/DiskImages2

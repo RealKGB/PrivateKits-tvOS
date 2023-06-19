@@ -31,6 +31,8 @@ internal func _getScreenScale() -> CGFloat {
 public class AssetCatalogWrapper {
     public static let shared = AssetCatalogWrapper()
     
+    public init () { }
+    
     public func renditions(forCarArchive url: URL) throws -> (CUICatalog, RenditionCollection) {
         let catalog = try CUICatalog(url: url)
         return (catalog, catalog.__getRenditionCollection())

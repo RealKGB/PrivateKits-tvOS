@@ -1,5 +1,5 @@
 --- !tapi-tbd-v3
-archs:                 [ arm64, arm64e]
+archs:                 [ arm64, arm64e ]
 platform:              tvos
 install-name:          /System/Library/PrivateFrameworks/CoreSVG.framework/CoreSVG
 current-version:       1
